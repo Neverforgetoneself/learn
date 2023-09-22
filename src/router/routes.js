@@ -1,18 +1,21 @@
 import aboutNo from "@/components/About.vue";
 export const routes = [
-  {
+  /* {
     path: "/",
     name: "home",
     component: () => import("@/components/HelloWorld.vue"),
+  }, */
+  {
+    path: "/",
+    name: "home",
+    component: () => import("@/home.vue"),
   },
   {
     path: "/home",
-    name: "home",
     component: () => import("@/components/HelloWorld.vue"),
   },
   {
     path: "/about",
-    name: "about",
     meta: {
       isNext: true,
       id: "1",
@@ -36,6 +39,10 @@ export const routes = [
   {
     path: "/showRouter",
     component: () => import("@/components/ShowRouter.vue"),
+  },
+  {
+    path: "/showTable",
+    component: () => import("@/components/ShowTable.vue"),
   },
   {
     path: "/showSomeRouter",

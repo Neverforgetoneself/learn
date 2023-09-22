@@ -1,20 +1,19 @@
 <template>
   <div id="app">
-    home
-    <dc-form :model="formData" ref="fromRule" :rules="formRules" label-width="80px">
+    <!-- <dc-form :model="formData" ref="fromRule" :rules="formRules" label-width="80px">
 
       <dc-form-item label="爱好1" prop="hobby5" placeholder="输入hobby5" type="text" v-model="formData.hobby5" />
 
-      <el-form-item label="时间00">
-        <el-date-picker v-model="formData.date10" type="date" placeholder="选择周">
-        </el-date-picker>
-      </el-form-item>
 
       <dc-form-item label="爱好2" prop="hobby1" :readonly="false" placeholder="输入爱好"
         :inTextSuffix="['el-icon-delete-solid', '元']" :inTextPrefix="['人', 'el-icon-user']" type="text" :clearable="true"
-        v-model="formData.hobby1" :rules="{ required: true, message: '输入爱好', trigger: 'blur' }" />
+        v-model="formData.hobby1" :rules="{ required: true, message: '输入爱好', trigger: 'blur' }" /> -->
 
-      <dc-form-item label="爱好3" prop="hobby2" :readonly="false" placeholder="输入爱好" type="text"
+    <!--  <dc-form-item label="爱好2" name="hobby1" :readonly="false" placeholder="输入爱好"
+        :inTextSuffix="['el-icon-delete-solid', '元']" :inTextPrefix="['人', 'el-icon-user']" type="text" :clearable="true"
+         :rules="{ required: true, message: '输入爱好', trigger: 'blur' }" /> -->
+
+    <!-- <dc-form-item label="爱好3" prop="hobby2" :readonly="false" placeholder="输入爱好" type="text"
         outTextPrepend="el-icon-user" outTextAppend="元" v-model="formData.hobby2"
         :rules="{ required: true, message: '输入爱好', trigger: 'blur' }" />
 
@@ -66,19 +65,26 @@
 
 
     </dc-form>
-    <el-button @click="save" type="primary">提交</el-button>
-    <!-- <button @click='addNum'>首页</button>
-    <hr />
-    <router-view name="default"></router-view>
+    <el-button @click="save" type="primary">提交</el-button> -->
+    <!--  <router-link to="/home"></router-link>
+
+    <button @click='addNum'>首页</button>
+    <hr /> <router-view name="default"></router-view>
     <hr />
     <router-view name="two"></router-view>
     <hr />
     <router-view name="three"></router-view> -->
+
+    <!-- <dc-table></dc-table> -->
+    <HomeC />
+    <router-view></router-view>
+    <el-button type="paramy">返回</el-button>
   </div>
 </template>
 
 <script>
-
+// import DcTable from './dcTable/dcTable.vue';
+import HomeC from './home.vue'
 export default {
   name: 'App',
   data() {
@@ -128,6 +134,8 @@ export default {
     },
   },
   components: {
+    // DcTable
+    HomeC
   }
 }
 </script>

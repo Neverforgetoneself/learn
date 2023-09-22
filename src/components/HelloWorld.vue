@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <p>hello</p>
-    <!-- <router-link to="/home/about">关于</router-link> -->
+    <router-link to="/home/about">关于</router-link>
     <button @click="goAbout">关于</button>
     <button @click="goMovie">电影1</button>
     <button @click="goShowRouter">跳转</button>
